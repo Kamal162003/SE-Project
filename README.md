@@ -29,8 +29,8 @@ A lightweight, zero-dependency, self-contained AI mock interview platform featur
 
 ### 1. Clone & Run
 ```bash
-git clone https://github.com/Kamal162003/minimal-ai-mock-interviewer.git
-cd minimal-ai-mock-interviewer
+git clone https://github.com/Kamal162003/SE-Project.git
+cd SE-Project
 node server.js
 ```
 
