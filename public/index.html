@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Minimal AI Mock Interviewer — Studio Edition</title>
+  <!-- Premium Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Atmospheric Lighting & Acoustic Dot Grid -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
+  <div class="acoustic-grid-bg"></div>
+
+  <div class="app-container">
+    <!-- Studio Header & Hardware Stepper -->
+    <header class="app-header">
+      <div class="brand-group">
+        <div class="brand-symbol">
+          <div class="core-pip"></div>
+          <div class="pulse-ring"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">MOCK INTERVIEW // AI</span>
+          <span class="brand-spec">ACOUSTIC & REASONING ENGINE v2.4</span>
+        </div>
+      </div>
+
+      <nav class="hardware-stepper" aria-label="Interview Progress">
+        <div class="step-segment active" id="step1">
+          <span class="step-num">01</span>
+          <span class="step-label">CONFIGURATION</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-segment" id="step2">
+          <span class="step-num">02</span>
+          <span class="step-label">LIVE SIMULATION</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-segment" id="step3">
+          <span class="step-num">03</span>
+          <span class="step-label">SCORECARD</span>
+        </div>
+      </nav>
+
+      <div class="header-status-badge">
+        <span class="telemetry-dot"></span>
+        <span class="telemetry-label">SYSTEM READY</span>
+      </div>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- SCREEN 1: ARCHITECTURAL ONBOARDING & INTERVIEW SETUP                       -->
+    <!-- ========================================================================= -->
+    <main class="page-view" id="pageSetup">
+      <div class="setup-wrapper">
+        <!-- Hero Header -->
+        <header class="hero-stage">
+          <div class="hero-badge">
+            <span class="pulse-emerald"></span>
+            <span>TECHNICAL EVALUATION ENGINE</span>
+          </div>
+          <h1 class="hero-title">Your Next Interview<br /><span class="hero-gradient-text">Starts Right Here.</span></h1>
+          <p class="hero-description">
+            High-fidelity technical assessment calibrated across distributed systems, frontend architecture, and engineering leadership.
+          </p>
+        </header>
+
+        <!-- Studio Control Surface -->
+        <div class="studio-surface setup-card">
+          <!-- SECTION 1: TARGET DOMAIN -->
+          <div class="control-rack">
+            <div class="rack-header">
+              <span class="rack-index">01 // TARGET DOMAIN</span>
+            </div>
+
+            <!-- Clean Domain Selector Chips (No symbols, no cluttered subtitles) -->
+            <div class="domain-chip-grid" id="domainChips">
+              <button type="button" class="domain-chip active" data-value="backend">
+                <span class="chip-name">Backend Systems</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="system-design">
+                <span class="chip-name">System Design</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="frontend">
+                <span class="chip-name">Frontend Architecture</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="software-engineer">
+                <span class="chip-name">General SDE</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="devops">
+                <span class="chip-name">DevOps & Cloud</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="aiml">
+                <span class="chip-name">AI & Data Engineering</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="behavioral">
+                <span class="chip-name">Behavioral (STAR)</span>
+              </button>
+              <button type="button" class="domain-chip" data-value="custom">
+                <span class="chip-name">Custom Role</span>
+              </button>
+            </div>
+
+            <!-- Hidden native select for 100% app.js compatibility -->
+            <div class="form-group hidden-dropdown">
+              <label for="trackSelect">Area of Interest / Domain</label>
+              <select id="trackSelect">
+                <option value="backend" selected>Backend Engineering & Systems</option>
+                <option value="system-design">System Design & Distributed Architecture</option>
+                <option value="frontend">Frontend Engineering & Web Performance</option>
+                <option value="software-engineer">Software Engineer (General SDE)</option>
+                <option value="devops">DevOps, Cloud & Infrastructure</option>
+                <option value="aiml">AI / ML & Data Engineering</option>
+                <option value="behavioral">Behavioral & Leadership (STAR Method)</option>
+                <option value="custom">Custom Area / Job Description</option>
+              </select>
+            </div>
+
+            <!-- Custom Spec Input (Dynamic) -->
+            <div class="form-group full-width hidden" id="customGroup">
+              <label for="customDescInput">Target Job Description or Technology Stack</label>
+              <textarea id="customDescInput" rows="3" placeholder="e.g. Staff Backend Engineer: Go microservices, CockroachDB, Kubernetes, event-driven streaming with Apache Kafka..."></textarea>
+            </div>
+          </div>
+
+          <!-- SECTION 2: INTELLIGENCE ENGINE -->
+          <div class="control-rack">
+            <div class="rack-header">
+              <span class="rack-index">02 // INTELLIGENCE ENGINE</span>
+            </div>
+
+            <div class="engine-cards-grid" id="engineCards">
+              <div class="engine-card active" data-engine="local">
+                <div class="engine-card-top">
+                  <div class="engine-status-led led-green"></div>
+                  <span class="engine-tag">ZERO CONFIG</span>
+                </div>
+                <div class="engine-title">Built-in Minimal</div>
+                <div class="engine-desc">Fast heuristic engine. No API key required.</div>
+              </div>
+
+              <div class="engine-card" data-engine="gemini">
+                <div class="engine-card-top">
+                  <div class="engine-status-led led-blue"></div>
+                  <span class="engine-tag">RECOMMENDED</span>
+                </div>
+                <div class="engine-title">Google Gemini AI</div>
+                <div class="engine-desc">Adaptive reasoning via Gemini Flash.</div>
+              </div>
+
+              <div class="engine-card" data-engine="chatgpt">
+                <div class="engine-card-top">
+                  <div class="engine-status-led led-violet"></div>
+                  <span class="engine-tag">OPENAI</span>
+                </div>
+                <div class="engine-title">ChatGPT (GPT-4o)</div>
+                <div class="engine-desc">Rigorous rubric evaluation via GPT-4o.</div>
+              </div>
+            </div>
+
+            <!-- Hidden native select for 100% app.js compatibility -->
+            <div class="form-group hidden-dropdown">
+              <label for="engineSelect">Interview Engine / AI Provider</label>
+              <select id="engineSelect">
+                <option value="local" selected>Built-in Minimal Engine</option>
+                <option value="gemini">Google Gemini</option>
+                <option value="chatgpt">ChatGPT (OpenAI GPT-4o-mini)</option>
+              </select>
+            </div>
+
+            <!-- API Key Input Field (shown when Gemini or ChatGPT selected) -->
+            <div class="form-group full-width hidden" id="apiKeyGroup">
+              <div class="input-label-row">
+                <label for="apiKeyInput" id="apiKeyLabel">API Key (Required for ChatGPT / Gemini)</label>
+                <span class="secure-badge">SESSION-ENCRYPTED</span>
+              </div>
+              <div class="input-with-icon">
+                <input type="password" id="apiKeyInput" placeholder="Paste your API key here..." autocomplete="off" />
+              </div>
+              <span class="input-hint" id="apiKeyHint">Stored securely in your local browser storage.</span>
+            </div>
+          </div>
+
+          <!-- SECTION 3: CALIBRATION & SIMULATION DYNAMICS -->
+          <div class="control-rack">
+            <div class="rack-header">
+              <span class="rack-index">03 // SIMULATION CALIBRATION</span>
+            </div>
+
+            <div class="form-grid-tri">
+              <!-- Experience Level -->
+              <div class="form-group">
+                <label for="expLevelSelect">Candidate Seniority</label>
+                <div class="select-wrapper">
+                  <select id="expLevelSelect">
+                    <option value="entry">Entry-Level / Intern (0-1 yrs)</option>
+                    <option value="mid" selected>Mid-Level / Intermediate (2-4 yrs)</option>
+                    <option value="senior">Senior Engineer (5-8 yrs)</option>
+                    <option value="staff">Staff / Principal Architect (8+ yrs)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Persona -->
+              <div class="form-group">
+                <label for="personaSelect">Interviewer Rigor</label>
+                <div class="select-wrapper">
+                  <select id="personaSelect">
+                    <option value="neutral" selected>Calibrated & Professional</option>
+                    <option value="challenging">Challenging & Rigorous (Deep)</option>
+                    <option value="supportive">Collaborative Tech Lead</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Question Count -->
+              <div class="form-group">
+                <label for="questionCountSelect">Question Volume</label>
+                <div class="select-wrapper">
+                  <select id="questionCountSelect">
+                    <option value="3">3 Questions (Rapid Focus)</option>
+                    <option value="4" selected>4 Questions (Standard Deep-Dive)</option>
+                    <option value="6">6 Questions (Comprehensive Audit)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Voice Toggle -->
+              <div class="form-group">
+                <label for="voiceToggle">Neural Voice Synthesis</label>
+                <div class="select-wrapper">
+                  <select id="voiceToggle">
+                    <option value="on" selected>Voice Synthesis Enabled</option>
+                    <option value="off">Muted (Visual Text Only)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Button (No emojis) -->
+          <div class="setup-action-rack">
+            <button id="startBtn" class="btn-launch">
+              <span class="btn-launch-glow"></span>
+              <span class="btn-launch-content">
+                <span class="btn-launch-text">COMMENCE TECHNICAL SIMULATION</span>
+                <span class="btn-launch-arrow">→</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========================================================================= -->
+    <!-- SCREEN 2: LIVE INTERVIEW (THE CINEMATIC DIALOGUE STAGE)                    -->
+    <!-- ========================================================================= -->
+    <main class="page-view hidden" id="pageInterview">
+      <div class="stage-container">
+        <!-- Telemetry HUD & Controls -->
+        <div class="stage-hud">
+          <div class="hud-left">
+            <div class="hud-pill role-pill">
+              <span class="hud-label">DOMAIN</span>
+              <span class="hud-val" id="sessionRole">Software Engineer</span>
+            </div>
+            <div class="hud-pill">
+              <span class="hud-label">LEVEL</span>
+              <span class="hud-val" id="sessionExp">Mid-Level</span>
+            </div>
+            <div class="hud-pill">
+              <span class="hud-label">RIGOR</span>
+              <span class="hud-val" id="sessionPersona">Professional</span>
+            </div>
+            <div class="hud-pill engine-hud-pill">
+              <span class="hud-indicator-dot"></span>
+              <span class="hud-val" id="sessionEngine">Built-in Minimal</span>
+            </div>
+          </div>
+
+          <div class="hud-right">
+            <div class="hud-progress-block">
+              <div class="hud-progress-labels">
+                <span class="hud-progress-title">AUDIT PHASE</span>
+                <span class="hud-progress-count" id="progressText">Question 1 of 4</span>
+              </div>
+              <div class="hud-progress-track">
+                <div class="hud-progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+            <button id="endEarlyBtn" class="btn-hud-exit" title="Conclude interview early and generate scorecard">
+              <span class="exit-icon">✕</span>
+              <span>CONCLUDE EARLY</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Central Cinema Stage -->
+        <div class="cinema-stage">
+          <!-- Real-Time Acoustic Canvas Visualizer -->
+          <div class="visualizer-container">
+            <canvas id="audioCanvas" width="900" height="96"></canvas>
+            <div class="visualizer-overlay-labels">
+              <span class="freq-tag">ACOUSTIC SPECTRUM // 48.0 kHz</span>
+              <div class="speaking-banner hidden" id="speakingBanner">
+                <span class="speaking-dot"></span>
+                <span id="speakingText">Interviewer speaking...</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question Display & Dialogue Timeline -->
+          <div class="dialogue-stage" id="chatViewport">
+            <!-- Active Question & Prior Turns Render Here -->
+          </div>
+        </div>
+
+        <!-- Floating Studio Dock Input Console -->
+        <div class="input-dock-panel">
+          <div class="dock-inner">
+            <div class="dock-input-wrapper">
+              <textarea 
+                id="answerInput" 
+                rows="2" 
+                placeholder="Articulate your technical architecture, trade-offs, and implementation details... (Press Enter to transmit, Shift+Enter for newline)"
+              ></textarea>
+              
+              <div class="dock-telemetry">
+                <span class="word-counter" id="liveWordCounter">0 words</span>
+                <span class="counter-divider">•</span>
+                <span class="counter-target">Target: 50–90 words</span>
+              </div>
+            </div>
+
+            <div class="dock-actions">
+              <!-- Tactile Speech-To-Text Microphone Trigger -->
+              <button id="micBtn" class="dock-mic-btn" type="button" title="Toggle Real-Time Speech Recognition">
+                <div class="mic-rings">
+                  <div class="ring ring-1"></div>
+                  <div class="ring ring-2"></div>
+                </div>
+                <div class="mic-core">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                  </svg>
+                </div>
+              </button>
+
+              <!-- Primary Submit Transmission Button -->
+              <button id="submitBtn" class="dock-send-btn" type="button">
+                <span class="send-label">TRANSMIT</span>
+                <span class="send-shortcut">↵</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========================================================================= -->
+    <!-- SCREEN 3: PERFORMANCE SCORECARD (EXECUTIVE DEBRIEF)                        -->
+    <!-- ========================================================================= -->
+    <main class="page-view hidden" id="pageReport">
+      <div class="report-wrapper">
+        <div class="report-card">
+          <!-- Executive Header -->
+          <div class="scorecard-header">
+            <div class="scorecard-meta-block">
+              <div class="scorecard-stamp">CANDIDATE EVALUATION</div>
+              <h2 class="scorecard-title">Technical Assessment Scorecard</h2>
+              <p class="scorecard-subtitle" id="reportSubtitle">Software Engineer • Level: MID-LEVEL • Engine: Built-in</p>
+            </div>
+
+            <!-- Animated SVG Circular Grade Medallion -->
+            <div class="medallion-container">
+              <svg class="medallion-gauge" viewBox="0 0 120 120">
+                <circle class="gauge-bg" cx="60" cy="60" r="50"></circle>
+                <circle class="gauge-bar" id="scoreGaugeBar" cx="60" cy="60" r="50"></circle>
+              </svg>
+              <div class="medallion-inner">
+                <div class="grade-symbol" id="reportGrade">A</div>
+                <div class="overall-pct" id="reportOverallScore">88%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quad Telemetry Metrics (Clean, no redundant footnote clutter) -->
+          <div class="telemetry-quad-grid">
+            <div class="quad-tile">
+              <div class="quad-top">
+                <span class="quad-name">TECHNICAL MASTERY</span>
+                <span class="quad-val" id="reportTechScore">85%</span>
+              </div>
+              <div class="quad-bar">
+                <div class="quad-fill fill-violet" id="techFillBar"></div>
+              </div>
+            </div>
+
+            <div class="quad-tile">
+              <div class="quad-top">
+                <span class="quad-name">COMMUNICATION & CONTEXT</span>
+                <span class="quad-val" id="reportCommScore">90%</span>
+              </div>
+              <div class="quad-bar">
+                <div class="quad-fill fill-emerald" id="commFillBar"></div>
+              </div>
+            </div>
+
+            <div class="quad-tile">
+              <div class="quad-top">
+                <span class="quad-name">MEAN WORD DENSITY</span>
+                <span class="quad-val" id="reportWordAvg">68</span>
+              </div>
+              <div class="quad-bar">
+                <div class="quad-fill fill-amber" id="wordFillBar"></div>
+              </div>
+            </div>
+
+            <div class="quad-tile">
+              <div class="quad-top">
+                <span class="quad-name">RUBRIC BENCHMARK</span>
+                <span class="quad-val text-cyan">FAANG // L5</span>
+              </div>
+              <div class="quad-bar">
+                <div class="quad-fill fill-cyan" style="width: 100%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Executive Strengths & Actionable Growth Vectors -->
+          <div class="insights-dual-grid">
+            <div class="insight-card card-strengths">
+              <div class="insight-header">
+                <div class="insight-badge badge-green">VERIFIED STRENGTHS</div>
+                <h3 class="insight-title">Demonstrated Technical Competencies</h3>
+              </div>
+              <ul id="reportStrengths" class="insight-bullet-list"></ul>
+            </div>
+
+            <div class="insight-card card-growth">
+              <div class="insight-header">
+                <div class="insight-badge badge-amber">ACTIONABLE GROWTH</div>
+                <h3 class="insight-title">Recommendations & Growth Areas</h3>
+              </div>
+              <ul id="reportImprovements" class="insight-bullet-list"></ul>
+            </div>
+          </div>
+
+          <!-- Question-by-Question Deep Dive Analysis -->
+          <div class="audit-history-block">
+            <div class="audit-header">
+              <span class="audit-tag">SECTION 03 // AUDIT LOG</span>
+              <h3 class="audit-title">Question-by-Question Evaluation Breakdown</h3>
+            </div>
+            <div id="reportTurnsContainer" class="audit-turns-stack"></div>
+          </div>
+
+          <!-- Executive Actions Rack (Clean, no icons) -->
+          <div class="scorecard-actions">
+            <button id="downloadReportBtn" class="btn-executive btn-download">
+              <span>DOWNLOAD EXECUTIVE AUDIT (.MD)</span>
+            </button>
+            <button id="newInterviewBtn" class="btn-executive btn-restart">
+              <span>COMMENCE NEW SESSION</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

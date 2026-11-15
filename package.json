@@ -1,0 +1,13 @@
+{
+  "name": "minimal-mock-interview",
+  "version": "1.0.0",
+  "description": "Zero-dependency, self-contained AI mock interview engine with speech recognition and synthesis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["interview", "ai", "mock-interview", "zero-dependency"],
+  "author": "",
+  "license": "MIT"
+}
+
