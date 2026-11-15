@@ -29,8 +29,6 @@ const apiKeyGroup = document.getElementById("apiKeyGroup");
 const apiKeyLabel = document.getElementById("apiKeyLabel");
 const apiKeyInput = document.getElementById("apiKeyInput");
 const apiKeyHint = document.getElementById("apiKeyHint");
-const customGroup = document.getElementById("customGroup");
-const customDescInput = document.getElementById("customDescInput");
 const expLevelSelect = document.getElementById("expLevelSelect");
 const personaSelect = document.getElementById("personaSelect");
 const questionCountSelect = document.getElementById("questionCountSelect");
@@ -165,9 +163,6 @@ if (domainChips.length > 0 && trackSelect) {
       chip.classList.add("active");
       const val = chip.getAttribute("data-value");
       trackSelect.value = val;
-      if (customGroup) {
-        customGroup.classList.toggle("hidden", val !== "custom");
-      }
     });
   });
 }
@@ -185,10 +180,9 @@ if (engineCards.length > 0 && engineSelect) {
   });
 }
 
-// Custom domain toggle for select element
-if (trackSelect && customGroup) {
+// Domain select change sync
+if (trackSelect) {
   trackSelect.addEventListener("change", () => {
-    customGroup.classList.toggle("hidden", trackSelect.value !== "custom");
     if (domainChips.length > 0) {
       domainChips.forEach((chip) => {
         chip.classList.toggle("active", chip.getAttribute("data-value") === trackSelect.value);
@@ -477,7 +471,7 @@ if (startBtn) {
       track: trackSelect ? trackSelect.value : "software-engineer",
       provider: engineSelect ? engineSelect.value : "local",
       apiKey: apiKeyInput ? apiKeyInput.value.trim() : "",
-      customDescription: customDescInput ? customDescInput.value.trim() : "",
+      customDescription: "",
       experienceLevel: expLevelSelect ? expLevelSelect.value : "mid",
       persona: personaSelect ? personaSelect.value : "neutral",
       questionCount: questionCountSelect ? questionCountSelect.value : "4"
