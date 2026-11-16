@@ -60,11 +60,26 @@ minimal-mock-interview/
 ├── engine.js           # NLP interview engine, scenario archetypes & scoring
 ├── README.md           # Documentation
 ├── .env.example        # Environment variable template
+├── w1-w7 (*.md)        # Weekly engineering logs & ticket resolutions
 └── public/             # Static frontend client
     ├── index.html      # Semantic HTML5 studio layout
     ├── style.css       # Obsidian dark-mode styling with precision responsive rules
     └── app.js          # 60fps canvas visualizer, Web Speech API & session controller
 ```
+
+---
+
+## Weekly Deliverables & Engineering Logs (W1 – W7)
+
+| Week | Deliverable / Ticket Resolution | Documentation |
+| :---: | :--- | :--- |
+| **W1** | Order of Flags in Compilation Command & Linker Resolution | [w1-ticket-resolution.md](w1-ticket-resolution.md) |
+| **W2** | Dynamic Linking vs Static Linking & Shared Library Resolution | [w2-ticket-resolution.md](w2-ticket-resolution.md) |
+| **W3** | Zero-Score Evaluation Logic & Edge Case Remediation | [w3-zero-score-evaluation-logic.md](w3-zero-score-evaluation-logic.md) |
+| **W4** | Chromium SpeechSynthesis Utterance Garbage Collection Bug | [w4-chromium-speech-synthesis-gc.md](w4-chromium-speech-synthesis-gc.md) |
+| **W5** | SpeechRecognition Buffer Preservation & Audio Pipeline Continuity | [w5-speech-recognition-buffer-preservation.md](w5-speech-recognition-buffer-preservation.md) |
+| **W6** | React Immutability, Stale Closures & Asynchronous State | [w6-react-immutability-stale-closures.md](w6-react-immutability-stale-closures.md) |
+| **W7** | UI Contrast Ratio, Accessibility & HiDPI Canvas Scaling | [w7-ui-contrast-canvas-scaling.md](w7-ui-contrast-canvas-scaling.md) |
 
 ---
 
